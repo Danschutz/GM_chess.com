@@ -19,63 +19,26 @@ This JavaScript script modifies the appearance of specific elements on a webpage
 4. **Paste the JavaScript code** provided below and press `Enter`.
 
    ```javascript
-   (function() {
-       // Function to replace the first <a> element
-       function replaceFirstAnchorElement() {
-           var oldElement = document.querySelector('a[data-tooltip-target="6"][href*="badge-diamond"]');
-           if (oldElement) {
-               var newElement = document.createElement('a');
-               newElement.className = 'user-chess-title-component';
-               newElement.href = '/members/titled-players';
-               newElement.target = '_blank';
-               newElement.dataset.tooltipTarget = '12';
-               newElement.textContent = 'GM';
-               oldElement.parentNode.replaceChild(newElement, oldElement);
-               console.log('First <a> element successfully replaced.');
-           } else {
-               console.log('First <a> element not found.');
-           }
-       }
+const selectors = [
+    'a.mvp-badge-component.mvp-badge-diamond.mvp-badge-link[href*="web_play_live_arena"]',
+    'a.mvp-badge-component.mvp-badge-diamond.mvp-badge-link[href*="web_play"]',
+    'div.cc-user-badge-component.cc-user-badge-diamond'
+];
 
-       // Function to replace the second <a> element
-       function replaceSecondAnchorElement() {
-           var oldElement = document.querySelector('a[data-tooltip-target="6"][href*="web_play_live_arena"]');
-           if (oldElement) {
-               var newElement = document.createElement('a');
-               newElement.className = 'user-chess-title-component';
-               newElement.href = '/members/titled-players';
-               newElement.target = '_blank';
-               newElement.dataset.tooltipTarget = '12';
-               newElement.textContent = 'GM';
-               oldElement.parentNode.replaceChild(newElement, oldElement);
-               console.log('Second <a> element successfully replaced.');
-           } else {
-               console.log('Second <a> element not found.');
-           }
-       }
+const newHTML = '<a class="user-chess-title-component" href="/members/titled-players" target="_blank" data-tooltip-target="1">GM</a>';
 
-       // Function to replace a <div> element
-       function replaceDivElement() {
-           var oldElement = document.querySelector('div[data-tooltip-target="0"]');
-           if (oldElement) {
-               var newElement = document.createElement('a');
-               newElement.className = 'user-chess-title-component';
-               newElement.href = '/members/titled-players';
-               newElement.target = '_blank';
-               newElement.dataset.tooltipTarget = '12';
-               newElement.textContent = 'GM';
-               oldElement.parentNode.replaceChild(newElement, oldElement);
-               console.log('<div> element successfully replaced.');
-           } else {
-               console.log('<div> element not found.');
-           }
-       }
+selectors.forEach(selector => {
+    const elements = document.querySelectorAll(selector);
 
-       // Execute the replacement of all elements
-       replaceFirstAnchorElement();
-       replaceSecondAnchorElement();
-       replaceDivElement();
-   })();
+    if (elements.length > 0) {
+        elements.forEach(element => {
+            element.outerHTML = newHTML;
+        });
+    } else {
+        console.log(`No elements found for the selector "${selector}".`);
+    }
+});
+
 
 ## Simple tutorial
 
