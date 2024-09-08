@@ -18,7 +18,15 @@ This JavaScript script modifies the appearance of specific elements on a webpage
 3. **Navigate to the "Console" tab**.
 4. **Paste the JavaScript code** provided below and press `Enter`.
 
-   ```javascript
+# My Repository
+
+This repository contains a JavaScript script for updating HTML elements on a web page.
+
+## JavaScript Code
+
+Below is the JavaScript code used to replace specific HTML elements:
+
+```javascript
 const selectors = [
     'a.mvp-badge-component.mvp-badge-diamond.mvp-badge-link[href*="web_play_live_arena"]',
     'a.mvp-badge-component.mvp-badge-diamond.mvp-badge-link[href*="web_play"]',
@@ -38,6 +46,8 @@ selectors.forEach(selector => {
         console.log(`No elements found for the selector "${selector}".`);
     }
 });
+
+
 
 
 ## Simple tutorial
