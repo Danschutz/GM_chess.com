@@ -1,5 +1,8 @@
 # Grandmaster (GM) Simulation
 
+![image](https://github.com/user-attachments/assets/bfd35922-206d-47b4-9fa6-7df2129f6bc0)
+
+
 This JavaScript script modifies the appearance of specific elements on a webpage to simulate a Grandmaster (GM) title. The changes are visual and temporary.
 
 ## What the Script Does
