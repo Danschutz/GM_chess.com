@@ -85,3 +85,5 @@ This JavaScript script modifies the appearance of specific elements on a webpage
 
 - Important Note: To use this script and modify the appearance of the elements on the page, you need to be a Diamond Member. The visual change is temporary and only applies to your view of the current page.
 
+![Uploading image.png…]()
+
