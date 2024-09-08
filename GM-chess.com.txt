@@ -1,21 +1,29 @@
-// scripts/update-elements.js
-
+// Array containing CSS selectors for the elements to be replaced
 const selectors = [
+    // Selector for <a> element with href containing "web_play_live_arena"
     'a.mvp-badge-component.mvp-badge-diamond.mvp-badge-link[href*="web_play_live_arena"]',
+    // Selector for <a> element with href containing "web_play"
     'a.mvp-badge-component.mvp-badge-diamond.mvp-badge-link[href*="web_play"]',
+    // Selector for <div> element with specific classes
     'div.cc-user-badge-component.cc-user-badge-diamond'
 ];
 
+// The new HTML content that will replace the selected elements
 const newHTML = '<a class="user-chess-title-component" href="/members/titled-players" target="_blank" data-tooltip-target="1">GM</a>';
 
+// Iterate over each selector to find and replace elements
 selectors.forEach(selector => {
+    // Select all elements that match the current selector
     const elements = document.querySelectorAll(selector);
 
+    // Check if any elements were found
     if (elements.length > 0) {
+        // Replace each found element with the new HTML
         elements.forEach(element => {
             element.outerHTML = newHTML;
         });
     } else {
+        // Log a message if no elements were found for the selector
         console.log(`No elements found for the selector "${selector}".`);
     }
 });
