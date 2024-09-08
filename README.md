@@ -81,3 +81,7 @@ This JavaScript script modifies the appearance of specific elements on a webpage
 
 ![2024-09-08 11-28-32](https://github.com/user-attachments/assets/6109d910-f74b-4654-b444-17d80ff5eff9)
 
+### Note..
+
+- Important Note: To use this script and modify the appearance of the elements on the page, you need to be a Diamond Member. The visual change is temporary and only applies to your view of the current page.
+
