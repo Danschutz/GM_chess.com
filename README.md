@@ -46,7 +46,7 @@ selectors.forEach(selector => {
         console.log(`No elements found for the selector "${selector}".`);
     }
 });
-
+ ```
 
 
 
