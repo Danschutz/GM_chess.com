@@ -1,63 +1,21 @@
-(function() {
-    // Function to replace the first <a> element
-    function replaceFirstAnchorElement() {
-        // Select the <a> element with a specific data-tooltip-target and href
-        var oldElement = document.querySelector('a[data-tooltip-target="6"][href*="badge-diamond"]');
-        if (oldElement) {
-            // Create a new <a> element
-            var newElement = document.createElement('a');
-            newElement.className = 'user-chess-title-component'; // Set the class of the new element
-            newElement.href = '/members/titled-players'; // Set the href of the new element
-            newElement.target = '_blank'; // Make the link open in a new tab
-            newElement.dataset.tooltipTarget = '12'; // Set a data attribute on the new element
-            newElement.textContent = 'GM'; // Set the text content of the new element
-            oldElement.parentNode.replaceChild(newElement, oldElement); // Replace the old element with the new one
-            console.log('First <a> element successfully replaced.'); // Log success message
-        } else {
-            console.log('First <a> element not found.'); // Log message if the old element was not found
-        }
-    }
+// scripts/update-elements.js
 
-    // Function to replace the second <a> element
-    function replaceSecondAnchorElement() {
-        // Select the <a> element with a specific data-tooltip-target and href
-        var oldElement = document.querySelector('a[data-tooltip-target="6"][href*="web_play_live_arena"]');
-        if (oldElement) {
-            // Create a new <a> element
-            var newElement = document.createElement('a');
-            newElement.className = 'user-chess-title-component'; // Set the class of the new element
-            newElement.href = '/members/titled-players'; // Set the href of the new element
-            newElement.target = '_blank'; // Make the link open in a new tab
-            newElement.dataset.tooltipTarget = '12'; // Set a data attribute on the new element
-            newElement.textContent = 'GM'; // Set the text content of the new element
-            oldElement.parentNode.replaceChild(newElement, oldElement); // Replace the old element with the new one
-            console.log('Second <a> element successfully replaced.'); // Log success message
-        } else {
-            console.log('Second <a> element not found.'); // Log message if the old element was not found
-        }
-    }
+const selectors = [
+    'a.mvp-badge-component.mvp-badge-diamond.mvp-badge-link[href*="web_play_live_arena"]',
+    'a.mvp-badge-component.mvp-badge-diamond.mvp-badge-link[href*="web_play"]',
+    'div.cc-user-badge-component.cc-user-badge-diamond'
+];
 
-    // Function to replace a <div> element
-    function replaceDivElement() {
-        // Select the <div> element with a specific data-tooltip-target
-        var oldElement = document.querySelector('div[data-tooltip-target="0"]');
-        if (oldElement) {
-            // Create a new <a> element
-            var newElement = document.createElement('a');
-            newElement.className = 'user-chess-title-component'; // Set the class of the new element
-            newElement.href = '/members/titled-players'; // Set the href of the new element
-            newElement.target = '_blank'; // Make the link open in a new tab
-            newElement.dataset.tooltipTarget = '12'; // Set a data attribute on the new element
-            newElement.textContent = 'GM'; // Set the text content of the new element
-            oldElement.parentNode.replaceChild(newElement, oldElement); // Replace the old element with the new one
-            console.log('<div> element successfully replaced.'); // Log success message
-        } else {
-            console.log('<div> element not found.'); // Log message if the old element was not found
-        }
-    }
+const newHTML = '<a class="user-chess-title-component" href="/members/titled-players" target="_blank" data-tooltip-target="1">GM</a>';
 
-    // Execute the replacement of all elements
-    replaceFirstAnchorElement();
-    replaceSecondAnchorElement();
-    replaceDivElement();
-})();
+selectors.forEach(selector => {
+    const elements = document.querySelectorAll(selector);
+
+    if (elements.length > 0) {
+        elements.forEach(element => {
+            element.outerHTML = newHTML;
+        });
+    } else {
+        console.log(`No elements found for the selector "${selector}".`);
+    }
+});
