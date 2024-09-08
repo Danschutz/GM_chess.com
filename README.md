@@ -60,6 +60,12 @@ selectors.forEach(selector => {
 
 ![image](https://github.com/user-attachments/assets/0ff24dd1-dd08-4853-8411-22c59e75f203)
 
+### Note plus
+
+- as I gave up on the project it still has some flaws like you get rating not update, but don't worry it's just visual
+
+![image](https://github.com/user-attachments/assets/af1604f8-ab98-4294-993b-5e10696f34d6)
+
 
 
 
