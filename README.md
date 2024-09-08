@@ -76,3 +76,8 @@ This JavaScript script modifies the appearance of specific elements on a webpage
        replaceSecondAnchorElement();
        replaceDivElement();
    })();
+
+## Simple tutorial
+
+![2024-09-08 11-28-32](https://github.com/user-attachments/assets/6109d910-f74b-4654-b444-17d80ff5eff9)
+
