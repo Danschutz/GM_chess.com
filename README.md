@@ -66,6 +66,15 @@ selectors.forEach(selector => {
 
 ![image](https://github.com/user-attachments/assets/af1604f8-ab98-4294-993b-5e10696f34d6)
 
+## Contact
+
+For any questions or support, feel free to reach out to me:
+
+- **Instagram**: [@1925days](https://www.instagram.com/1925days/)
+- **Email**: [DanielSantzs18@gmail.com](mailto:mailto:DanielSantzs18@gmail.com)
+- **Discord**: [https://discord.com/user/DanielSantzs](https://discord.com/users/1283088407052156982)
+- **Telegram**: [@DanielSantzs](https://t.me/@DanielSantzs)
+
 
 
 
